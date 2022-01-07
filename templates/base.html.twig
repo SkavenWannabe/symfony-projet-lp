@@ -5,6 +5,7 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        <script src="https://cdn.tailwindcss.com"></script>
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
@@ -14,6 +15,19 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <header class="border-b-2 border-slate-800 rounded-b p-4 flex">
+            {% block header %}
+                {% include "navbar.html.twig" %}
+            {% endblock %}
+        </header>
+        <main class="p-4 pl-8">
+            {% block body %}{% endblock %}
+        </main>
+        <footer class="border-t-2 border-slate-800 rounded-t p-4 text-center">
+            {% block footer %}
+                <p class="text-xl">l'E-Gumes, nous faisons pousser des plantes, pas les prix.</p>
+                <p class="text-gray-700">Projet symfony licence professionnelle - AW 2022</p>
+            {% endblock %}
+        </footer>
     </body>
 </html>
