@@ -1,7 +1,40 @@
 index:
-  path: /
+  path: /{_locale}
   controller: App\Controller\DefaultController::index
+  requirements:
+    _locale: '%app.supported_locales%'
+  defaults:
+    _locale: fr
 
 contact:
-  path: /contact
+  path: /{_locale}/contact
   controller: App\Controller\DefaultController::contact
+  requirements:
+    _locale: '%app.supported_locales%'
+  defaults:
+    _locale: fr
+
+boutique:
+  path: /{_locale}/boutique
+  controller: App\Controller\BoutiqueController:index
+  requirements:
+    _locale: '%app.supported_locales%'
+  defaults:
+    _locale: fr
+rayon:
+  path: /{_locale}/rayon/{idCategorie}
+  controller: App\Controller\BoutiqueController:rayon
+  requirements:
+    _locale: '%app.supported_locales%'
+  defaults:
+    _locale: fr
+    idCategorie: '1'
+
+search:
+  path: /{_locale}/search
+  controller: App\Controller\BoutiqueController:search
+  requirements:
+    _locale: '%app.supported_locales%'
+  defaults:
+    _locale: fr
+    search: 'oreo'

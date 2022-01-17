@@ -1,0 +1,20 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    l'E-Gume - categorie
+{% endblock %}
+{% block body %}
+    <h1 class="text-2xl border-b border-slate-700">Bienvenue sur la boutique l'E-Gume</h1>
+
+    <div class="flex">
+        {% for categorie in  categories  %}
+            <div class="p-4 border border-slate-700 rounded m-4 text-center justify-center hover:bg-green-400 ">
+                <a href="{{ path('rayon', {'idCategorie' : categorie.id}) }}">
+                    <img class="m-auto rounded-xl border border-slate-300" src="{{ asset(categorie.visuel) }}" alt="">
+                    <h2 class="text-lg">{{ categorie.libelle }}</h2>
+                    <p>{{ categorie.texte }}</p>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

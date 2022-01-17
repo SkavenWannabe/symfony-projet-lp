@@ -1,9 +1,12 @@
 {% extends "base.html.twig" %}
 
+{% block title %}
+    {% trans %}default.title{% endtrans %}
+{% endblock %}
 {% block body %}
-    <h1 class="text-2xl border-b border-slate-700">Bienvenue sur l'E-Gume</h1>
+    <h1 class="text-2xl border-b border-slate-700">{% trans %}index.h1{% endtrans %}</h1>
     <article class="m-4 p-4 border border-slate-700 rounded">
-        <h2 class="text-lg italic">Bienvenue</h2>
-        <p>Bienvenue sur l'E-gume, le premier site e-commerce dédié aux légumes, fruits et baies.</p>
+        <h2 class="text-lg italic">{% trans %}index.article.title{% endtrans %}</h2>
+        <p>{% trans %}index.article.description{% endtrans %}</p>
     </article>
 {% endblock %}

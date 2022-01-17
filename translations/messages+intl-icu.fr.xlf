@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="9YXFf4B" resname="base.footer.slogan">
+        <source>base.footer.slogan</source>
+        <target>l'E-Gumes, nous faisons pousser des plantes, pas les prix.</target>
+      </trans-unit>
+      <trans-unit id="iWf_7UM" resname="base.footer.copyright">
+        <source>base.footer.copyright</source>
+        <target>Projet symfony licence professionnelle - AW 2022</target>
+      </trans-unit>
+      <trans-unit id="98wRRKk" resname="header.navbar.home">
+        <source>header.navbar.home</source>
+        <target>Accueil</target>
+      </trans-unit>
+      <trans-unit id="muB2qil" resname="header.navbar.shop">
+        <source>header.navbar.shop</source>
+        <target>Boutique</target>
+      </trans-unit>
+      <trans-unit id="AEMAg4R" resname="header.navbar.contact">
+        <source>header.navbar.contact</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="uM_9oDl" resname="header.button.language">
+        <source>header.button.language</source>
+        <target>langue</target>
+      </trans-unit>
+      <trans-unit id="nwIwTOp" resname="header.button.french">
+        <source>header.button.french</source>
+        <target>français</target>
+      </trans-unit>
+      <trans-unit id="UlXfZUu" resname="header.button.english">
+        <source>header.button.english</source>
+        <target>anglais</target>
+      </trans-unit>
+      <trans-unit id="6qNM5OD" resname="default.title">
+        <source>default.title</source>
+        <target>l'E-Gume site e-commerce</target>
+      </trans-unit>
+      <trans-unit id="G9fb.k7" resname="index.h1">
+        <source>index.h1</source>
+        <target>Bienvenue sur l'E-Gume</target>
+      </trans-unit>
+      <trans-unit id="hnJvGvi" resname="index.article.title">
+        <source>index.article.title</source>
+        <target>Bienvenue</target>
+      </trans-unit>
+      <trans-unit id="Rfl7xbt" resname="index.article.description">
+        <source>index.article.description</source>
+        <target>Bienvenue sur l'E-gume, le premier site e-commerce dédié aux légumes, fruits et baies.</target>
+      </trans-unit>
+      <trans-unit id="V6An5qD" resname="contact.title">
+        <source>contact.title</source>
+        <target>l'E-Gume - contact</target>
+      </trans-unit>
+      <trans-unit id="XaBnq5r" resname="contact.h1">
+        <source>contact.h1</source>
+        <target>Contacter-nous</target>
+      </trans-unit>
+      <trans-unit id=".P82XaJ" resname="contact.article.title">
+        <source>contact.article.title</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="sw9yttA" resname="contact.article.description">
+        <source>contact.article.description</source>
+        <target>vous pouvez nous contacter :</target>
+      </trans-unit>
+      <trans-unit id="b9rUmOs" resname="contact.article.phone">
+        <source>contact.article.phone</source>
+        <target>par téléphone au 06 21 21 45</target>
+      </trans-unit>
+      <trans-unit id="rJLa05j" resname="contact.article.mail">
+        <source>contact.article.mail</source>
+        <target>par mail : mèl@lEGume.fake.notsocommercial</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
