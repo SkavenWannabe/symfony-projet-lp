@@ -38,3 +38,37 @@ search:
   defaults:
     _locale: fr
     search: 'oreo'
+
+panier:
+  path: /{_locale}/panier
+  controller: App\Controller\PanierController:index
+  requirements:
+    _locale: '%app.supported_locales%'
+  defaults:
+    _locate: fr
+
+panier_ajouter:
+  path: /{_locale}/panier/ajouter/{idProduit}/{quantite}
+  controller: App\Controller\PanierController:ajouter
+  requirements:
+    _locale: '%app.supported_locales%'
+  defaults:
+    _locale: fr
+    quantite: 1
+
+panier_retirer:
+  path: /{_locale}/panier/retirer/{idProduit}/{quantite}
+  controller: App\Controller\PanierController:retirer
+  requirements:
+    _locale: '%app.supported_locales%'
+  defaults:
+    _locale: fr
+    quantite: 1
+
+panier_supprimer:
+  path: /{_locale}/panier/supprimer/{idProduit}
+  controller: App\Controller\PanierController:supprimer
+  requirements:
+    _locale: '%app.supported_locales%'
+  defaults:
+    _locale: fr

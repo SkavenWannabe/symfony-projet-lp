@@ -1,5 +1,6 @@
 <?php
 namespace App\Service;
+use App\Entity\Categorie;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 // Un service pour manipuler le contenu de la Boutique

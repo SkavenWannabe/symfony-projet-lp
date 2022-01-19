@@ -1,5 +1,6 @@
 <?php
 namespace App\Controller;
+use App\Entity\Categorie;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\Service\BoutiqueService;
 
