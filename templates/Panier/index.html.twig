@@ -10,18 +10,18 @@
         <table>
             {% for produit in panier %}
                 <tr>
-                    <td class="p-4"><img src="{{ asset(produit.produit.visuel) }}" alt="img"></td>
+                    <td class="p-4"><img src="{{ asset(produit.produit.0.visuel) }}" alt="img"></td>
                     <td class="p-4">
-                        <p>Produit : {{ produit.produit.libelle }}</p>
+                        <p>Produit : {{ produit.produit.0.libelle }}</p>
                         <p>Quantite : {{ produit.quantite }}</p>
-                        <p>Prix unité : {{ produit.produit.prix }}€</p>
+                        <p>Prix unité : {{ produit.produit.0.prix }}€</p>
                     </td>
-                    <td class="p-4">Prix total : {{ produit.quantite * produit.produit.prix}}€</td>
+                    <td class="p-4">Prix total : {{ produit.quantite * produit.produit.0.prix}}€</td>
                     <td class="p-4">
                         <div class="flex justify-center">
-                            <a href="{{ path('panier_ajouter', {'idProduit': produit.produit.id}) }}" class="border border-slate-700 rounded-l-lg p-2 text-black hover:bg-slate-700 hover:text-white">Ajouter</a>
-                            <a href="{{ path('panier_retirer', {'idProduit': produit.produit.id}) }}" class="border border-slate-700 p-2 text-black hover:bg-slate-700 hover:text-white">Retirer</a>
-                            <a href="{{ path('panier_supprimer', {'idProduit': produit.produit.id}) }}" class="border border-slate-700 rounded-r-lg p-2 text-black hover:bg-slate-700 hover:text-white">Supprimer</a>
+                            <a href="{{ path('panier_ajouter', {'idProduit': produit.produit.0.id}) }}" class="border border-slate-700 rounded-l-lg p-2 text-black hover:bg-slate-700 hover:text-white">Ajouter</a>
+                            <a href="{{ path('panier_retirer', {'idProduit': produit.produit.0.id}) }}" class="border border-slate-700 p-2 text-black hover:bg-slate-700 hover:text-white">Retirer</a>
+                            <a href="{{ path('panier_supprimer', {'idProduit': produit.produit.0.id}) }}" class="border border-slate-700 rounded-r-lg p-2 text-black hover:bg-slate-700 hover:text-white">Supprimer</a>
                         </div>
                     </td>
                 </tr>

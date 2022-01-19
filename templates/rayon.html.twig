@@ -11,7 +11,7 @@
         {% for produit in  produits  %}
             <div class="p-4 border border-slate-700 rounded m-4 text-center justify-center hover:bg-green-400 ">
                 <a href="{{ path('panier_ajouter', {'idProduit': produit.id}) }}">
-                    <img class="m-auto" src="{{ asset(produit.visuel) }}" alt="">
+                    <img class="m-auto rounded-xl" src="{{ asset(produit.visuel) }}" alt="">
                     <h2 class="text-lg">{{ produit.libelle }}</h2>
                     <p>{{ produit.texte }}</p>
                     <p>Prix : {{ produit.prix }}€/kg</p>

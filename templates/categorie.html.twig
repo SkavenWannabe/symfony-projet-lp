@@ -10,7 +10,7 @@
         {% for categorie in  categories  %}
             <div class="p-4 border border-slate-700 rounded m-4 text-center justify-center hover:bg-green-400 ">
                 <a href="{{ path('rayon', {'idCategorie' : categorie.id}) }}">
-                    <img class="m-auto rounded-xl border border-slate-300" src="{{ asset(categorie.visuel) }}" alt="">
+                    <img class="m-auto rounded-xl" src="{{ asset(categorie.visuel) }}" alt="">
                     <h2 class="text-lg">{{ categorie.libelle }}</h2>
                     <p>{{ categorie.texte }}</p>
                 </a>

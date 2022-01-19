@@ -47,4 +47,14 @@ class ProduitRepository extends ServiceEntityRepository
         ;
     }
     */
+    public function findByTexteOrLibelle(string $search) {
+        $entityManager = $this->getEntityManager();
+        $query = $entityManager->createQuery(
+            'SELECT p
+             FROM App\Entity\Produit p
+             WHERE p.libelle LIKE CONCAT(\'%\',:search, \'%\') OR p.texte LIKE CONCAT(\'%\',:search, \'%\')'
+        )->setParameter('search', $search);
+        // returns an array of Product objects
+        return $query->getResult();
+    }
 }

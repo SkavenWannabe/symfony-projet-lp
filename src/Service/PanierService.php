@@ -1,22 +1,22 @@
 <?php
 // src/Service/PanierService.php
 namespace App\Service;
+use App\Repository\ProduitRepository;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
-use App\Service\BoutiqueService;
 // Service pour manipuler le panier et le stocker en session
 class PanierService {
 ////////////////////////////////////////////////////////////////////////////
 
     const  PANIER_SESSION = 'panier'; // Le nom de la variable de session du panier
     private $session; // Le service Session
-    private $boutique; // Le service Boutique
+    private $produitRepository; // Le service Boutique
     private $panier; // Tableau associatif idProduit => quantite
     // donc $this->panier[$i] = quantite du produit dont l'id = $i
     // constructeur du service
 
-    public function __construct(SessionInterface $session, BoutiqueService $boutique) {
+    public function __construct(SessionInterface $session, ProduitRepository $produitRepository) {
         //Récupération des services session et BoutiqueService
-        $this->boutique = $boutique;
+        $this->produitRepository = $produitRepository;
         $this->session = $session;
          //Récupération du panier en session s'il existe, init. à vide sinon
         $this->panier = $session->get($this::PANIER_SESSION, array());
@@ -28,7 +28,7 @@ class PanierService {
         $produits = array();
 
         foreach ($this->panier as $id => $quantite) {
-            $produit = $this->boutique->findProduitById($id);
+            $produit = $this->produitRepository->findBy(array('id' => $id));
             if($produit != null) {
                 $produits[$id] = ['produit' => $produit, 'quantite' => $quantite];
             }
@@ -42,9 +42,9 @@ class PanierService {
         $total = 0;
 
         foreach ($this->panier as $id => $quantite) {
-            $produit = $this->boutique->findProduitById($id);
+            $produit = $this->produitRepository->findOneBy(array('id' => $id));
             if($produit != null) {
-                $total += $produit['prix'] * $quantite;
+                $total += $produit->getPrix() * $quantite;
             }
         }
 
