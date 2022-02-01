@@ -72,3 +72,20 @@ panier_supprimer:
     _locale: '%app.supported_locales%'
   defaults:
     _locale: fr
+
+usager_index:
+  path: /{_locale}/usager/accueil/{id}
+  controller: App\Controller\UsagerController:index
+  requirements:
+    _locale: '%app.supported_locales%'
+  defaults:
+    _locale: fr
+    id: -1
+
+usager_inscription:
+  path: /{_locale}/usager/inscription
+  controller: App\Controller\UsagerController:new
+  requirements:
+    _locale: '%app.supported_locales%'
+  defaults:
+    _locale: fr

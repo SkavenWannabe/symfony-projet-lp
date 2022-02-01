@@ -77,6 +77,18 @@
         <source>header.button.english</source>
         <target>English</target>
       </trans-unit>
+      <trans-unit id="nvl6UTy" resname="header.button.connexion">
+        <source>header.button.connexion</source>
+        <target>Connection</target>
+      </trans-unit>
+      <trans-unit id="PWNCh_W" resname="header.drop.inscription">
+        <source>header.drop.inscription</source>
+        <target>Sign up</target>
+      </trans-unit>
+      <trans-unit id="bUgPU2K" resname="header.drop.compte">
+        <source>header.drop.compte</source>
+        <target>My account</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

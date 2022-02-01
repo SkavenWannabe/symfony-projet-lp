@@ -77,6 +77,18 @@
         <source>contact.article.mail</source>
         <target>par mail : mèl@lEGume.fake.notsocommercial</target>
       </trans-unit>
+      <trans-unit id="nvl6UTy" resname="header.button.connexion">
+        <source>header.button.connexion</source>
+        <target>Connexion</target>
+      </trans-unit>
+      <trans-unit id="PWNCh_W" resname="header.drop.inscription">
+        <source>header.drop.inscription</source>
+        <target>Inscription</target>
+      </trans-unit>
+      <trans-unit id="bUgPU2K" resname="header.drop.compte">
+        <source>header.drop.compte</source>
+        <target>Mon compte</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

@@ -33,6 +33,10 @@
     <button id="dropdownButton" data-dropdown-toggle="dropdown" class="p-4 hover:bg-green-400 hover:text-white underline inline align-top" type="button">
         {% trans %} header.button.language {% endtrans %}
     </button>
+
+    <button id="dropdownConnexionButton" data-dropdown-toggle="dropdownConnexion" class="p-4 hover:bg-green-400 hover:text-white underline inline align-top" type="button">
+        {% trans %} header.button.connexion {% endtrans %}
+    </button>
 </div>
 
 <div id="dropdown" class="hidden z-10 w-44 text-base list-none bg-white rounded divide-y divide-gray-100 shadow border border-slate-800 text-center">
@@ -44,6 +48,21 @@
         </li>
         <li>
             <a href="{{ path(route, params | merge({'_locale': 'en' })) }}">{% trans %}header.button.english{% endtrans %}</a>
+        </li>
+    </ul>
+</div>
+
+<div id="dropdownConnexion" class="hidden z-10 w-44 text-base list-none bg-white rounded divide-y divide-gray-100 shadow border border-slate-800 text-center">
+    <ul class="py-1" aria-labelledby="dropdownConnexionButton">
+        <li>
+            <a href="{{ path('usager_inscription') }}">
+                {% trans %}header.drop.inscription{% endtrans %}
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('usager_index') }}">
+                {% trans %}header.drop.compte{% endtrans %}
+            </a>
         </li>
     </ul>
 </div>
