@@ -42,6 +42,11 @@ class Commande
         return $this->date_commande;
     }
 
+    public function getdate_commande(): ?\DateTimeInterface
+    {
+        return $this->date_commande;
+    }
+
     public function setDateCommande(\DateTimeInterface $date_commande): self
     {
         $this->date_commande = $date_commande;

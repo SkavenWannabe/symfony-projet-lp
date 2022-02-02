@@ -3,6 +3,7 @@ namespace App\Service;
 use App\Entity\Categorie;
 use Symfony\Component\HttpFoundation\RequestStack;
 
+// TODO : remove unused class
 // Un service pour manipuler le contenu de la Boutique
 //  qui est composée de catégories et de produits stockés "en dur"
 class BoutiqueService {

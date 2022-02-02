@@ -73,6 +73,14 @@ panier_supprimer:
   defaults:
     _locale: fr
 
+panier_validation:
+  path: /{_locale}/panier/valider
+  controller: App\Controller\PanierController:validation
+  requirements:
+    _locale: '%app.supported_locales%'
+  defaults:
+    _locale: fr
+
 usager_index:
   path: /{_locale}/usager/accueil/{id}
   controller: App\Controller\UsagerController:index

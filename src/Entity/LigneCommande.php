@@ -11,13 +11,6 @@ use Doctrine\ORM\Mapping as ORM;
 class LigneCommande
 {
     /**
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
-    private $id;
-
-    /**
      * @ORM\Column(type="string", length=255)
      */
     private $quantite;
@@ -28,21 +21,18 @@ class LigneCommande
     private $prix;
 
     /**
+     * @ORM\Id
      * @ORM\ManyToOne(targetEntity=Commande::class)
      * @ORM\JoinColumn(nullable=false)
      */
     private $id_commande;
 
     /**
+     * @ORM\Id
      * @ORM\ManyToOne(targetEntity=Article::class)
      * @ORM\JoinColumn(nullable=false)
      */
     private $id_article;
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
 
     public function getQuantite(): ?string
     {
@@ -68,12 +58,12 @@ class LigneCommande
         return $this;
     }
 
-    public function getIdCommande(): ?Article
+    public function getIdCommande(): ?Commande
     {
         return $this->id_commande;
     }
 
-    public function setIdCommande(?Article $id_commande): self
+    public function setIdCommande(?Commande $id_commande): self
     {
         $this->id_commande = $id_commande;
 
