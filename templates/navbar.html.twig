@@ -54,15 +54,28 @@
 
 <div id="dropdownConnexion" class="hidden z-10 w-44 text-base list-none bg-white rounded divide-y divide-gray-100 shadow border border-slate-800 text-center">
     <ul class="py-1" aria-labelledby="dropdownConnexionButton">
-        <li>
-            <a href="{{ path('usager_inscription') }}">
-                {% trans %}header.drop.inscription{% endtrans %}
-            </a>
-        </li>
-        <li>
-            <a href="{{ path('usager_index') }}">
-                {% trans %}header.drop.compte{% endtrans %}
-            </a>
-        </li>
+        {% if(app.user) %}
+            <li>
+                <a href="{{ path('usager_index') }}">
+                    {% trans %}header.drop.compte{% endtrans %}
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('app_logout') }}">
+                    {% trans %}header.drop.deconnexion{% endtrans %}
+                </a>
+            </li>
+        {% else %}
+            <li>
+                <a href="{{ path('app_login') }}">
+                    {% trans %}header.drop.connexion{% endtrans %}
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('usager_inscription') }}">
+                    {% trans %}header.drop.inscription{% endtrans %}
+                </a>
+            </li>
+        {% endif %}
     </ul>
 </div>

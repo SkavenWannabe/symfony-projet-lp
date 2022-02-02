@@ -82,13 +82,12 @@ panier_validation:
     _locale: fr
 
 usager_index:
-  path: /{_locale}/usager/accueil/{id}
+  path: /{_locale}/usager/accueil
   controller: App\Controller\UsagerController:index
   requirements:
     _locale: '%app.supported_locales%'
   defaults:
     _locale: fr
-    id: -1
 
 usager_inscription:
   path: /{_locale}/usager/inscription

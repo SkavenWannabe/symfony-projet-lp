@@ -89,6 +89,14 @@
         <source>header.drop.compte</source>
         <target>My account</target>
       </trans-unit>
+      <trans-unit id="ZMgE5c3" resname="header.drop.deconnexion">
+        <source>header.drop.deconnexion</source>
+        <target>log out</target>
+      </trans-unit>
+      <trans-unit id="Ek3bZnl" resname="header.drop.connexion">
+        <source>header.drop.connexion</source>
+        <target>log in</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

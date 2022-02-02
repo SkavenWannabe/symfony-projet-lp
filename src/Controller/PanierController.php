@@ -31,10 +31,9 @@ class PanierController extends AbstractController {
         return $this->redirectToRoute('panier');
     }
 
-    public function validation(PanierService $panierService, UsagerRepository $usagerRepository, UsagerService $usagerService, EntityManagerInterface $entityManager) {
-        $usager = $usagerRepository->find($usagerService->getIdSession());
+    public function validation(PanierService $panierService, EntityManagerInterface $entityManager) {
 
-        $commande = $panierService->panierToCommande($usager, $entityManager);
+        $commande = $panierService->panierToCommande($this->getUser(), $entityManager);
 
         return $this->render('Panier/commande.html.twig', ['commande' => $commande]);
     }
